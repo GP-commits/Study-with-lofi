@@ -1,0 +1,28 @@
+{
+  "rules": {
+    "rooms": {
+      "$roomId": {
+        "chat": {
+          ".read": true,
+          ".write": true,
+          "$msgId": {
+            ".validate": "newData.hasChildren(['user','text','ts']) && newData.child('user').isString() && newData.child('user').val().length > 0 && newData.child('user').val().length <= 24 && newData.child('text').isString() && newData.child('text').val().length > 0 && newData.child('text').val().length <= 240 && (newData.child('ts').isNumber() || newData.child('ts').val() == now)"
+          }
+        },
+        "pomodoro": {
+          ".read": true,
+          ".write": true,
+          ".validate": "newData.val() === null || (newData.hasChildren(['startTime','durationMs','label','startedBy']) && (newData.child('startTime').isNumber() || newData.child('startTime').val() == now) && newData.child('durationMs').isNumber() && newData.child('durationMs').val() >= 60000 && newData.child('durationMs').val() <= 7200000 && newData.child('label').isString() && newData.child('label').val().length > 0 && newData.child('label').val().length <= 32 && newData.child('startedBy').isString() && newData.child('startedBy').val().length > 0 && newData.child('startedBy').val().length <= 24)"
+        },
+        "presence": {
+          ".read": true,
+          ".write": true,
+          "$clientId": {
+            ".validate": "newData.val() === null || (newData.hasChildren(['user','lastSeen']) && newData.child('user').isString() && newData.child('user').val().length > 0 && newData.child('user').val().length <= 24 && (newData.child('lastSeen').isNumber() || newData.child('lastSeen').val() == now))"
+          }
+        }
+      }
+    }
+  }
+}
+

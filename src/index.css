@@ -1,0 +1,23 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b0b10;
+}
+
+#root {
+  min-height: 100svh;
+}
