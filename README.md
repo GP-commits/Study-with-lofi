@@ -1,4 +1,5 @@
 # Study with lo-fi (static, Vercel-ready)
+<img width="1905" height="974" alt="image" src="https://github.com/user-attachments/assets/37348c95-1d90-4083-be9b-aaeb7c335baf" />
 
 Static web app (no custom backend server) that provides a shared “study with lo-fi” room:
 
